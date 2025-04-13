@@ -28,6 +28,7 @@ cmd - yum install mongodb-org
 
 # Step 7 : Setting up config sever 
 cmd - vim config.yml (Put code for config.yml)
+cmd - docker-compose -f config.yml up -d
 
 # Step 8 : Performing election to select primary config server (connect to any of the config server container using mongosh mongodb://AmazonlinuxPrivateTP:40001)
 mongodb cmd - 
@@ -45,6 +46,7 @@ rs.status()
 
 # Step 9 : Setting up Shrad 1 
 cmd - vim shrad1.yml (Put code for shrad1.yml)
+cmd - docker-compose -f shrad1.yml up -d
 
 # Step 10 : Performing election to select primary shrad 1 (connect to any of the shrad 1 container using mongosh mongodb://AmazonlinuxPrivateTP:50001)
 mongodb cmd - 
@@ -61,6 +63,7 @@ rs.status()
 
 # Step 11 : Setting up Shrad 2
 cmd - vim shrad2.yml (Put code for shrad2.yml)
+cmd - docker-compose -f shrad2.yml up -d
 
 # Step 12 : Performing election to select primary shrad 2 (connect to any of the shrad 2 container using mongosh mongodb://AmazonlinuxPrivateTP:50001)
 mongodb cmd - 
